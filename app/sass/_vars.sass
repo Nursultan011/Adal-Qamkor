@@ -1,0 +1,33 @@
+$white: #FFFFFF
+$black: #000000
+$whiteBlue: #F2F4F8
+$blueOpacity: #E4F6FF
+$grayText: #575757
+$grayDarkText: #747474
+$blueDarker: #144356
+$darker: #052535
+$grey50: #CECED9
+$green: #25B072
+$greyText: #42424E
+$darkGrey: #ACACAC
+$darkerBg: #16171C
+$cardBg: #282828
+@mixin flex($space: space-between,$align: center)
+    display: flex
+    align-items: $align
+    justify-content: $space
+@mixin lines($color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(37,176,114,1) 35%, rgba(0,212,255,1) 100%))
+    content: ""
+    width: 25%
+    background: $color
+    height: 1px
+    top: 50%
+    transform: translateY(-50%)
+    display: block
+    position: absolute
+@mixin btn($padding: 7px 16px)
+    padding: $padding
+    background-color: $green
+    border: none
+    @include flex
+    border-radius: 6px

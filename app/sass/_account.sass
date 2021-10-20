@@ -1,0 +1,211 @@
+.title2
+  font-size: 20px
+  color: $black
+
+.account
+  padding-bottom: 170px
+  &__inner
+    display: flex
+    justify-content: space-between
+    position: relative
+  &__sidebar
+    width: 30%
+    position: sticky
+    height: 100%
+    top: 20px
+    .person, .helped, .repost
+      background: #FCFCFC
+      box-shadow: 0px 3px 10px 1px rgba(36, 99, 115, 0.05)
+      border-radius: 10px
+      overflow: hidden
+    .person
+      width: 100%
+      margin-bottom: 20px
+      &__inner
+        padding: 15px 20px 25px 20px
+      &__img
+        img
+          width: 100%
+          height: 197px
+          object-fit: cover
+          object-position: center
+      &__subtitle
+        font-size: 14px
+        color: $greyText
+        margin-top: 5px
+      &__location
+        margin-top: 10px
+        font-size: 16px
+        color: $darkGrey
+        overflow: hidden
+        display: -webkit-box
+        -webkit-line-clamp: 1
+        -webkit-box-orient: vertical
+      .button-blue
+        width: 100%
+        margin-top: 24px
+    .helped
+      padding: 24px 24px 30px 24px
+      margin-bottom: 20px
+      .title2
+        margin-bottom: 25px
+      &__wrap
+        @include flex
+        span
+          &:first-child
+            font-size: 16px
+            color: $greyText
+            width: 65%
+            overflow: hidden
+            display: -webkit-box
+            -webkit-line-clamp: 1
+            -webkit-box-orient: vertical
+          &:last-child
+            font-size: 16px
+            color: $black
+            width: 33%
+            text-align: right
+        & + .helped__wrap
+          margin-top: 20px
+    .repost
+      padding: 24px
+      &__wrap
+        margin-top: 20px
+        display: flex
+        a
+          border: 1px solid #575757
+          box-sizing: border-box
+          width: 34px
+          height: 34px
+          border-radius: 16px
+          display: flex
+          justify-content: center
+          align-items: center
+          cursor: pointer
+          img
+            width: 20px
+            height: 20px
+            object-fit: contain
+            object-position: center
+          & + a
+            margin-left: 15px
+  &__content
+    width: 68%
+  &__block
+    background: #FFFFFF
+    border-radius: 10px
+    padding: 40px 40px 45px 40px
+    & + .account__block
+      margin-top: 20px
+    .description
+      margin-top: 20px
+      font-size: 16px
+      color: #636363
+      line-height: 20px
+    .location
+      margin-top: 25px
+      span
+        &:first-child
+          color: $darkGrey
+          font-size: 16px
+          display: block
+        &:last-child
+          color: $black
+          font-size: 18px
+          margin-top: 10px
+          display: block
+  &__head
+    @include flex
+  &__flex
+    display: flex
+    align-items: center
+    img
+      width: 32px
+      height: 32px
+      margin-right: 15px
+  &__gathered
+    margin-left: 5px
+  &__important
+    margin-top: 40px
+    letter-spacing: -0.02em
+    font-size: 24px
+    font-family: 'font-md'
+    color: #575575
+  &__result
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 35px
+    .button-blue
+      width: 35%
+    &>div
+      width: 60%
+      span
+        font-size: 18px
+        color: $black
+        padding-left: 20px
+        position: relative
+        & + span
+          margin-left: 20px
+        &::after
+          content: ''
+          width: 10px
+          height: 10px
+          border-radius: 10px
+          position: absolute
+          left: 0
+          top: calc(50% - 4px)
+          background: #20A4F5
+        &:last-child
+          &::after
+            background: #E86A84 !important
+  &__process
+    background: #F1F1F1
+    border-radius: 3px
+    overflow: hidden
+    height: 6px
+    width: 100%
+    margin-bottom: 20px
+    display: flex
+    position: relative
+  &__process-blue
+    height: 100%
+    background: #20A4F5
+  &__process-red
+    background: #E86A84
+    height: 100%
+  &__form
+    margin-top: 50px
+    div
+      @include flex
+      & + div
+        border-top: 1px solid #ACACAC
+        padding-top: 10px
+        margin-top: 10px
+    p
+      font-size: 18px
+      color: $black
+      margin-bottom: 0
+      width: 45%
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+    span
+      font-size: 18px
+      color: $darkGrey
+      width: 45%
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+    .checkbox
+      width: 24px
+      height: 24px
+      border: 1px solid #ACACAC
+      border-radius: 3px
+      &:checked
+        background-color: #6BB6E4 !important
+    .button-blue
+      margin-top: 65px
+      width: 50%
