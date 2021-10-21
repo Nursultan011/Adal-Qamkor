@@ -55,11 +55,53 @@
     display: flex
     justify-content: center
     position: relative
-    img
-      width: 130px !important
-      border-radius: 100% !important
-      height: 130px !important
-      z-index: 3
+    width: auto
+    &_wrapper
+      position: relative
+      border-collapse: collapse
+      border-radius: 100%
+      $size: 60px
+      $circumference: 3.14 * 2 * $size
+      $blueLeft: -$circumference + 60
+      $blueRight: $circumference
+      $redIncrease: -$circumference - 120
+      svg
+        position: absolute
+        left: 0
+        .circle
+          stroke: #20A4F5
+          position: absolute
+          left: 0
+          fill: none
+          top: 0
+          stroke-width: 3px
+          stroke-dashoffset: $blueLeft
+          stroke-dasharray: $blueRight
+          transform: rotate(0deg)
+          z-index: 1
+          transform-origin: 0
+        .circle2
+          stroke: #E86A84
+          position: absolute
+          left: 0
+          z-index: 0
+          fill: none
+          bottom: 0
+          stroke-width: 3px
+          stroke-dashoffset: $redIncrease
+          stroke-dasharray: $circumference
+          transform: rotate(0deg)
+          transform-origin: 0
+      img
+        width: 130px !important
+        border-radius: 100% !important
+        height: 130px !important
+        z-index: 3
+        margin-top: 10px
+        margin-left: 10px
+        position: relative
+      
+    
     .account__process
       position: absolute
       width: 153px
