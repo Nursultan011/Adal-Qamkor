@@ -231,6 +231,8 @@ main
         &__item-wrap
             padding: 16px 20px 20px 20px
             border-bottom: 1px solid #F1F1F1
+            .account__process
+                margin-top: 20px
         &__item-title
             font-size: 20px
             color: $black
@@ -379,13 +381,12 @@ footer
     .button
         font-size: 18px !important
 
-    .tabs
-        width: 100% !important
-        .tab
-            width: 50% !important
-            padding: 0 0 12px !important
-            text-align: center
-            font-size: 18px
+    .dots
+        left: 20px
+        width: auto !important
+
+    .title
+        font-size: 22px !important
 
     header
         .inner_left
@@ -406,14 +407,59 @@ footer
 
     main
         .sliders
+            &_wrapper
+                height: 480px
             &_wrapper_inner
                 padding: 0 20px !important
                 h4
                     width: auto !important
-                    font-size: 18px
-                    line-height: 22px
+                    font-size: 28px !important
+                    line-height: 32px !important
                 button
                     margin-top: 40px !important
+
+        .sponsor
+            &__items
+                flex-wrap: wrap
+            &__item
+                width: 100%
+                margin-bottom: 30px
+                img
+                    height: 330px
+                p
+                    margin-top: 15px
+                    margin-bottom: 5px
+
+        .help
+            .tabs
+                flex-wrap: wrap
+                flex-direction: column
+                align-items: flex-start
+                .title
+                    width: 100%
+                    margin-bottom: 15px
+                .tab
+                    & + .tab
+                        margin-top: 10px
+                        margin-left: 0
+            &__items
+                justify-content: space-between
+            &__item
+                width: 100%
+                margin-right: 0 !important
+
+        .request
+            &__inner
+                padding: 25px
+                .title
+                    padding: 0
+                form
+                    flex-wrap: wrap
+                .input
+                    width: 100%
+                    margin-bottom: 15px
+                .button-blue
+                    width: 100%
 
     footer
         padding: 70px 0 !important
@@ -452,9 +498,53 @@ footer
             &_langs
                 display: none !important
 
+    main
+        .sponsor
+            &__items
+                flex-wrap: wrap
+            &__item
+                width: 48%
+                margin-bottom: 10px
+
+        .request
+            &__inner
+                .title
+                    padding: 0
+                form
+                    flex-wrap: wrap
+                .input
+                    width: 48%
+                    margin-bottom: 15px
+                .button-blue
+                    width: 48%
+
+        .help
+            .tabs
+                flex-wrap: wrap
+                .title
+                    width: 100%
+                    margin-bottom: 15px
+            &__items
+                justify-content: space-between
+            &__item
+                width: 48%
+                margin-right: 0 !important
+
     footer
         .footer_center
             nav
                 width: 60% !important
+
+@media (min-width: 993px) and (max-width: 1199px)
+
+    main
+        .request__inner
+            .title
+                padding: 0 10%
+
+    footer
+        .footer_center
+            nav
+                width: 50% !important
 
 @import 'media'

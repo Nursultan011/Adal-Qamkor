@@ -181,7 +181,6 @@
   .profile
     padding-bottom: 100px
     &__item
-      background: #16171c !important
       padding: 20px
       &-name
         font-size: 22px
@@ -200,7 +199,6 @@
           height: 20px
     &__user
       padding: 20px
-      background: #16171c
       &-content
         width: calc(100% - 34px)
         justify-content: flex-start
@@ -226,12 +224,26 @@
           display: none
         img
           margin-right: 0
+    &__item-content
+      .card
+        flex-wrap: wrap
+      .card__block
+        width: 100%
+        margin-right: 0
+        margin-bottom: 15px
+      .card__settings
+        width: 100%
+      .items
+        flex-wrap: wrap
+      .item
+        width: 100%
+        margin-right: 0 !important
+        margin-bottom: 15px
 
 @media (min-width: 768px) and (max-width: 991px)
   .profile
     padding-bottom: 100px
     &__item
-      background: #16171c !important
       padding: 20px
       &-name
         font-size: 22px
@@ -250,7 +262,6 @@
           height: 20px
     &__user
       padding: 20px
-      background: #16171c
       &-content
         width: calc(100% - 34px)
         justify-content: flex-start
@@ -276,3 +287,30 @@
           display: none
         img
           margin-right: 0
+    &__item-content
+      .card
+        justify-content: space-between
+      .card__block
+        width: 49%
+      .card__settings
+        width: 49%
+      .items
+        justify-content: space-between
+      .item
+        width: 49%
+        margin-right: 0 !important
+        margin-bottom: 15px
+
+@media (min-width: 992px) and (max-width: 1199px)
+  .profile
+    &__user
+      &-edit
+        span
+          display: none
+    &__item-content
+      .items
+        justify-content: space-between
+      .item
+        width: 49%
+        margin-right: 0 !important
+        margin-bottom: 15px
