@@ -15,9 +15,66 @@
     box-shadow: 0px 3px 10px 1px rgba(36, 99, 115, 0.05)
     border-radius: 10px
     padding: 30px 70px 40px 70px
+    background-image: url('../img/account/Hand group.png')
+    background-repeat: no-repeat
+    background-position: right center
+    background-size: contain
     .title
       margin-bottom: 30px
       max-width: 620px
+
+.express
+  margin-top: 60px
+  .title
+    margin-bottom: 50px
+  .help__item
+    padding: 25px
+  .button-blue
+    width: 100%
+  &__title
+    font-size: 24px
+    color: $black
+    text-align: center
+  &__category
+    color: $greyText
+    font-size: 16px
+    margin-top: 2px
+    text-align: center
+  &__up
+    color: #6BB6E4
+    font-size: 16px
+    text-align: center
+  &__down
+    color: $black
+    font-size: 20px
+    text-align: center
+    margin-top: 2px
+    margin-bottom: 25px
+  &__img
+    margin: 20px 0
+    display: flex
+    justify-content: center
+    position: relative
+    img
+      width: 130px !important
+      border-radius: 100% !important
+      height: 130px !important
+      z-index: 3
+    .account__process
+      position: absolute
+      width: 153px
+      height: 153px
+      border-radius: 100%
+      z-index: 1
+      top: -11px
+    .white
+      position: absolute
+      z-index: 2
+      width: 143px
+      height: 143px
+      border-radius: 100%
+      background: $white
+      top: -7px
 
 .search
   margin-top: 35px
