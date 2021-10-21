@@ -209,3 +209,60 @@
     .button-blue
       margin-top: 65px
       width: 50%
+
+@media (max-width: 767px)
+  .account
+    padding-bottom: 100px
+    &__inner
+      flex-wrap: wrap
+    &__block
+      padding: 25px
+    &__head
+      flex-wrap: wrap
+    &__gathered
+      margin-top: 20px
+      font-size: 24px !important
+    &__sidebar
+      position: unset
+      width: 100%
+      .person
+        &__img
+          img
+            height: 330px
+      .repost
+        margin-bottom: 20px
+    &__content
+      width: 100%
+    &__result
+      margin-top: 20px
+      flex-wrap: wrap
+      &>div
+        width: 100%
+        span
+          display: block
+          & + span
+            margin-left: 0
+            margin-top: 3px
+      .button-blue
+        width: 100%
+        margin-top: 20px
+    &__form
+      .button-blue
+        width: 100%
+        margin-top: 35px
+
+@media (min-width: 768px) and (max-width: 992px)
+  .account
+    &__inner
+      flex-wrap: wrap
+    &__sidebar
+      position: unset
+      width: 100%
+      .person
+        &__img
+          img
+            height: 330px
+      .repost
+        margin-bottom: 20px
+    &__content
+      width: 100%
