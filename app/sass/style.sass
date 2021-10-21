@@ -125,9 +125,11 @@ main
                     &>h2
                         color: $black
                         font-size: 20px
+                        font-family: 'font-md'
                     &>h4
                         margin-top: 20px
                         font-size: 32px
+                        font-family: 'font-lg'
                         width: 405px
                         color: $greyText
                     &>button
@@ -292,18 +294,21 @@ header
                         width: 160px
                         height: 48px
             &_right
-                width: 60%
-                @include flex
+                @include flex(flex-end,center)
                 &>nav
-                    width: 60%
-                    @include flex(space-around)
+                    display: flex
+                    align-items: center
                     &>a
                         color: $black
-                        font-size: 20px
+                        font-size: 18px
+                        font-family: 'font-md'
+                        & + a
+                            margin-left: 50px
                 &_langs
                     cursor: pointer
                     text-transform: lowercase
-                    margin-right: 15px
+                    margin-left: 55px
+                    margin-right: 55px
                     span
                         color: $black
                     &>img
@@ -363,6 +368,7 @@ footer
                     & + img
                         margin-left: 15px
             &_right
+                margin-right: -10px
                 @include flex
                 cursor: pointer
                 svg
@@ -423,9 +429,12 @@ footer
                 flex-wrap: wrap
             &__item
                 width: 100%
-                margin-bottom: 30px
+                margin-bottom: 50px
                 img
-                    height: 330px
+                    height: auto
+                    max-height: 400px
+                    width: 100%
+                    object-fit: contain
                 p
                     margin-top: 15px
                     margin-bottom: 5px
@@ -447,6 +456,8 @@ footer
             &__item
                 width: 100%
                 margin-right: 0 !important
+                img
+                    height: 230px
 
         .request
             &__inner
@@ -478,6 +489,8 @@ footer
             img
                 width: 26px !important
                 height: 26px !important
+        .footer_bottom_right
+            margin-right: -10px
 
 @media (min-width: 768px) and (max-width: 992px)
 
@@ -541,6 +554,17 @@ footer
         .request__inner
             .title
                 padding: 0 10%
+
+    header
+        .inner_right
+            nav
+                a
+                    font-size: 18px !important
+                    & + a
+                        margin-left: 30px !important
+            &_langs
+                margin-left: 30px !important
+                margin-right: 30px !important
 
     footer
         .footer_center
