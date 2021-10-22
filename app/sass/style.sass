@@ -389,6 +389,11 @@ footer
 // Adaptive
 
 @media (max-width: 767px)
+
+    .container
+        padding-left: 20px
+        padding-right: 20px
+
     .burger
         display: block
         &-menu
@@ -455,39 +460,49 @@ footer
                 padding: 0 20px !important
                 h4
                     width: auto !important
-                    font-size: 28px !important
+                    font-size: 26px !important
                     line-height: 32px !important
                 button
                     margin-top: 40px !important
 
         .sponsor
             &__items
-                flex-wrap: wrap
+                width: max-content
+                margin-top: 30px
+            &__mobile-wrap
+                overflow-x: scroll !important
             &__item
-                width: 100%
-                margin-bottom: 50px
+                width: 140px !important
+                & + .sponsor__item
+                    margin-left: 20px
                 img
                     height: auto
-                    max-height: 400px
                     width: 100%
+                    max-height: 140px
                     object-fit: contain
                 p
                     margin-top: 15px
+                    font-size: 16px
                     margin-bottom: 5px
+                span
+                    font-size: 14px
 
         .help
+            &__mobile-wrap
+                overflow-x: scroll !important
             .tabs
-                flex-wrap: wrap
-                flex-direction: column
+                width: max-content
                 align-items: flex-start
+                margin-bottom: 15px
                 .title
-                    width: 100%
-                    margin-bottom: 15px
+                    margin-bottom: 0
+                    margin-right: 30px
                 .tab
+                    font-size: 20px
                     & + .tab
-                        margin-top: 10px
-                        margin-left: 0
+                        margin-left: 25px
             &__items
+                margin-top: 35px
                 justify-content: space-between
             &__item
                 width: 100%
