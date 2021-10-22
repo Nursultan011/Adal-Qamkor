@@ -107,6 +107,11 @@ h1,h2,h3,h4,h5,h6
         color: #144356 !important
         cursor: pointer
 
+.burger
+    display: none
+    &-menu
+        display: none
+
 main
     .sliders
         position: relative
@@ -384,6 +389,37 @@ footer
 // Adaptive
 
 @media (max-width: 767px)
+    .burger
+        display: block
+        &-menu
+            display: block
+            background-color: #144356
+            height: 100vh
+            padding-top: 30px
+            padding-bottom: 30px
+            &__header
+                display: flex
+                align-items: center
+                justify-content: space-between
+                .burger
+                    img
+                        width: 23px
+                        height: 17px
+            &__body
+                padding: 70px 0
+                display: flex
+                justify-content: space-between
+                nav
+                    a
+                        color: $white !important
+                        display: block
+                        font-size: 18px
+                        font-family: 'font-md'
+                        & + a
+                            margin-top: 25px
+                .inner_right_langs
+                    display: none
+
     .button
         font-size: 18px !important
 
@@ -493,6 +529,9 @@ footer
             margin-right: -10px
 
 @media (min-width: 768px) and (max-width: 992px)
+
+    .burger
+        display: block
 
     header
         .inner_left
