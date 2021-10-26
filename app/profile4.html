@@ -76,18 +76,42 @@
                   <!-- Здесь будет контент после открытие блока -->
                 </div>
               </div>
-              <div class="profile__item">
+              <div class="profile__item open">
                 <div class="profile__item-wrap">
                   <div class="profile__item-name">
                     <img src="img/profile/item2.svg" alt="" />
                     Привязанные карты
                   </div>
                   <div class="profile__item-close">
-                    <img src="img/profile/arrow-close.svg" alt="" />
+                    <img src="img/profile/arrow-open.svg" alt="" />
                   </div>
                 </div>
-                <div class="profile__item-content" style="display: none">
-                  <!-- Здесь будет контент после открытие блока -->
+                <div class="profile__item-content">
+                  <div class="card__add">
+                    <form action="">
+                      <div>
+                        <div class="card__add-wrap">
+                          <label for="">Имя владельца</label>
+                          <input type="text" />
+                        </div>
+                        <div class="card__add-wrap">
+                          <label for="">Срок действия</label>
+                          <input type="text" />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="card__add-wrap">
+                          <label for="">Номер карты</label>
+                          <input type="text" />
+                        </div>
+                        <div class="card__add-wrap">
+                          <label for="">CVV</label>
+                          <input type="text" />
+                        </div>
+                        <button class="button-blue">Добавить карту</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
               <div class="profile__item relative">

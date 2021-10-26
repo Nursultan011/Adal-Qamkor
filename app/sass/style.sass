@@ -31,6 +31,10 @@ a
 h1,h2,h3,h4,h5,h6
     margin: 0
 
+.relative
+    position: relative
+    overflow: hidden
+
 .button
     background: $green
     border-radius: 7px
@@ -190,6 +194,10 @@ main
                 width: 25%
                 padding-left: 0
                 padding-right: 0
+
+    .pb-300
+        padding-bottom: 300px
+
     .help
         margin-top: 50px
         .tabs
@@ -288,7 +296,7 @@ header
         .inner
             @include flex
             &_left
-                width: 20%
+                width: 22%
                 @include flex
                 &>img
                     &:first-child
@@ -299,40 +307,55 @@ header
                         width: 160px
                         height: 48px
             &_right
-                @include flex(flex-end,center)
+                width: 60%
+                @include flex(flex-end, center)
                 &>nav
-                    display: flex
-                    align-items: center
+                    width: 60%
+                    @include flex(space-around)
                     &>a
-                        color: $black
-                        font-size: 18px
-                        font-family: 'font-md'
-                        & + a
-                            margin-left: 50px
+                        color: white
+                        font-size: 20px
                 &_langs
                     cursor: pointer
-                    text-transform: lowercase
-                    margin-left: 55px
-                    margin-right: 55px
+                    display: flex
+                    margin-right: 40px
                     span
-                        color: $black
-                    &>img
-                        &:first-child
-                            border-radius: 100%
-                            width: 27px
-                            height: 27px
-                            margin-right: 15px
-                        &:last-child
+                        width: 66px
+                        height: 34px
+                        border: 2px solid transparent
+                        color: #000000
+                        display: block
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        font-size: 16px
+                        border-radius: 5px
+                        font-family: 'font-md'
+                        & + span
                             margin-left: 10px
+                    .active
+                        border: 2px solid #25B072
+                        box-sizing: border-box
+                        border-radius: 5px
+                        color: #25B072
+                    // &>img
+                    //     &:first-child
+                    //         border-radius: 100%
+                    //         width: 27px
+                    //         height: 27px
+                    //         margin-right: 15px
+                    //     &:last-child
+                    //         margin-left: 10px
+
                 &_btn
                     button
                         @include btn
                         &>img
                             width: 20px
                             margin-left: 10px
+
                 &>div
                     text-align: center
-
 footer
     background-color: $blueDarker
     padding: 100px 0
@@ -385,6 +408,114 @@ footer
                     svg
                         path
                             stroke: $green
+
+.popup
+    background: rgba(0, 0, 0, 0.4)
+    position: fixed
+    width: 100%
+    height: 100%
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    z-index: 111
+    .collection-popupWidth
+        width: 500px !important
+    &__inner
+        z-index: 222
+        position: absolute
+        width: 600px
+        max-height: calc(100vh - 30px)
+        overflow-y: scroll
+        margin-left: 15px
+        margin-right: 15px
+        margin-right: 15px
+        margin-bottom: 15px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background: #FFFFFF
+        border-radius: 10px
+        padding: 45px
+        .close
+            position: absolute
+            top: 40px
+            right: 35px
+            cursor: pointer
+            img
+                width: 24px
+                height: 24px
+        .title
+            font-size: 26px
+            font-family: 'font-md' !important
+            color: $black
+            margin-bottom: 30px
+    &__wrap
+        label
+            color: #ACACAC
+            font-size: 17px
+            display: block
+            margin-bottom: 10px
+        & + .popup__wrap
+            margin-top: 20px
+        .input
+            background: #F2F4F8
+            box-shadow: 0px 3px 10px 1px rgba(36, 99, 115, 0.05)
+            border-radius: 5px
+            border: none
+            padding: 15px 6% 15px 15px
+            width: 350px
+            height: 50px
+            color: #575757
+            font-size: 16px
+        .input-bg
+            background-image: url('../img/profile/edit-popup.svg')
+            background-repeat: no-repeat
+            background-position: right center
+            background-position-x: 96%
+    .button
+        margin-top: 30px
+
+    .collection-popup
+        margin-top: 30px
+        &>p
+            margin-top: -5px
+            font-size: 18px
+            color: $grayText
+            padding-bottom: 30px
+            margin-bottom: 0
+            border-bottom: 1px solid #D6D6D6
+        &__wrap
+            margin-top: 40px
+            div
+                padding-left: 30px
+                margin-bottom: 50px
+                position: relative
+                h2
+                    font-size: 22px
+                    color: $black
+                    font-family: 'font-md'
+                p
+                    margin-top: 20px
+                    font-size: 18px
+                    color: $grayText
+                    margin-bottom: 0
+                &::after
+                    content: ''
+                    position: absolute
+                    width: 15px
+                    height: 15px
+                    border-radius: 100%
+                    left: 0
+                    top: 5px
+            .blue
+                &::after
+                    background: $blue
+            .red
+                &::after
+                    background: #E86A84
+        .button-blue
+            width: 100%
 
 // Adaptive
 
