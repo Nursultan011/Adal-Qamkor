@@ -32,31 +32,83 @@
           object-position: center
       &__subtitle
         font-size: 14px
-        color: $greyText
+        color: #ACACAC
         margin-top: 5px
-      &__location
-        margin-top: 10px
-        font-size: 16px
-        color: $darkGrey
-        overflow: hidden
-        display: -webkit-box
-        -webkit-line-clamp: 1
-        -webkit-box-orient: vertical
       .button-blue
         width: 100%
         margin-top: 24px
+        height: 45px
+        padding-top: 0
+        padding-bottom: 0
+      .button-white
+        margin-top: 20px
+        border: 1px solid #6BB6E4
+        box-sizing: border-box
+        border-radius: 7px
+        background: $white
+        height: 45px
+        color: $blue
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        padding-right: 30px
+        img
+          margin-right: 12px
+
     .helped
       padding: 24px 24px 30px 24px
       margin-bottom: 20px
       .title2
         margin-bottom: 25px
+      &__empty
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        img
+          width: 34px
+          height: 34px
+          margin-right: 20px
+        p
+          margin-bottom: 0
+          font-size: 16px
+          line-height: 20px
+          color: #636363
+          margin-right: 20px
+      &__show
+        color: #636363
+        margin-top: 35px
+        font-size: 16px
+        font-family: 'font-md'
+        text-decoration: underline
+        cursor: pointer
       &__wrap
-        @include flex
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        &-noImage
+          width: 40px
+          height: 40px
+          overflow: hidden
+          border-radius: 100%
+          margin-right: 30px
+          background: #E4F6FF
+          display: flex
+          align-items: center
+          justify-content: center
+          font-size: 24px
+          color: #ABDDF5
+          text-transform: uppercase
+        img
+          width: 40px
+          height: 40px
+          border-radius: 100%
+          margin-right: 30px
         span
           &:first-child
             font-size: 16px
-            color: $greyText
-            width: 65%
+            color: #575757
+            width: 100%
             overflow: hidden
             display: -webkit-box
             -webkit-line-clamp: 1
@@ -64,8 +116,7 @@
           &:last-child
             font-size: 16px
             color: $black
-            width: 33%
-            text-align: right
+            width: 100%
         & + .helped__wrap
           margin-top: 20px
     .repost
@@ -99,22 +150,33 @@
     & + .account__block
       margin-top: 20px
     .description
-      margin-top: 20px
+      margin-top: 40px
       font-size: 16px
       color: #636363
       line-height: 20px
     .location
-      margin-top: 25px
+      margin-top: 20px
       span
         &:first-child
           color: $darkGrey
           font-size: 16px
-          display: block
+          display: flex
+          align-items: center
+          img
+            margin-right: 6px
         &:last-child
           color: $black
           font-size: 18px
-          margin-top: 10px
+          margin-top: 6px
           display: block
+  &__block-click
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__block-content
+    padding-bottom: 20px
+  &__opening
+    padding-bottom: 35px !important
   &__head
     @include flex
   &__flex
@@ -128,10 +190,47 @@
     margin-left: 5px
   &__important
     margin-top: 40px
+    margin-bottom: -20px
     letter-spacing: -0.02em
     font-size: 24px
     font-family: 'font-md'
     color: #575575
+  &__months
+    margin-top: 30px
+    display: flex
+    flex-wrap: wrap
+    &-wrap
+      margin-top: 60px
+    &-btns
+      margin-top: 60px
+      display: flex
+      justify-content: space-between
+      button
+        font-size: 16px !important
+        width: 48%
+        height: 45px
+      .button-white
+        border: 1px solid #6BB6E4
+        box-sizing: border-box
+        border-radius: 5px
+        background: $white
+        color: #747474
+        img
+          margin-right: 8px
+
+  &__month
+    cursor: pointer
+    background: $blue
+    border-radius: 5px
+    margin-top: 10px
+    font-size: 14px
+    color: $white
+    display: flex
+    align-items: center
+    padding: 5px 10px
+    margin-right: 10px
+    img
+      margin-left: 6px
   &__result
     display: flex
     justify-content: space-between
@@ -140,7 +239,7 @@
     .button-blue
       width: 35%
     &>div
-      width: 60%
+      width: 100%
       span
         font-size: 18px
         color: $black
@@ -292,6 +391,15 @@
       .button-blue
         width: 100%
         margin-top: 35px
+    &__months
+      &-btns
+        flex-wrap: wrap
+        button
+          width: 100% !important
+          padding-left: 0 !important
+          padding-right: 0 !important
+          & + button
+            margin-top: 20px
 
 @media (min-width: 768px) and (max-width: 992px)
   .account
