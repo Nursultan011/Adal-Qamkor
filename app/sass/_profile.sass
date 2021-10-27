@@ -28,6 +28,11 @@
       font-size: 20px
   &__user-edit
     cursor: pointer
+    display: flex
+    align-items: center
+    padding-left: 50px
+    border-left: 1px solid #696969
+    height: 80px
     img
       width: 24px
       height: 24px
@@ -36,6 +41,15 @@
       border-bottom: 1px solid $blue
       color: $blue
       font-size: 18px
+    .logout
+      margin-left: 50px
+      padding-left: 50px
+      border-left: 1px solid #696969
+      height: 80px
+      display: flex
+      align-items: center
+      img
+        cursor: pointer
   &__items
     .open
       background: $white !important
@@ -266,6 +280,14 @@
     overflow-y: scroll
     padding-right: 5%
     padding-top: 15px
+    &::-webkit-scrollbar
+      width: 4px
+    &::-webkit-scrollbar-track
+      background-color: #F2F2F2
+      border-radius: 5px
+    &::-webkit-scrollbar-thumb
+      background-color: $blue
+      border-radius: 5px
   &__list
     display: flex
     align-items: center
@@ -366,6 +388,14 @@
     overflow-y: scroll
     padding-right: 5%
     padding-top: 15px
+    &::-webkit-scrollbar
+      width: 4px
+    &::-webkit-scrollbar-track
+      background-color: #F2F2F2
+      border-radius: 5px
+    &::-webkit-scrollbar-thumb
+      background-color: #7C6BE4
+      border-radius: 5px
     .partners
       display: flex
       justify-content: space-between
@@ -448,6 +478,7 @@
           height: 20px
     &__user
       padding: 20px
+      position: relative
       &-content
         width: calc(100% - 34px)
         justify-content: flex-start
@@ -466,13 +497,22 @@
         span
           font-size: 14px
       &-edit
+        position: absolute
+        bottom: -10px
+        right: 20px
         margin-top: 0px
         margin-bottom: 0px
+        border-left: none
+        padding-left: 0
         span
           font-size: 15px
           display: none
         img
           margin-right: 0
+        .logout
+          border-left: none
+          padding-left: 0
+          margin-left: 15px
     &__item-content
       .card
         flex-wrap: wrap
@@ -655,11 +695,17 @@
       &-edit
         margin-top: 0px
         margin-bottom: 0px
+        padding-left: 0
+        border-left: none
         span
           font-size: 15px
           display: none
         img
           margin-right: 0
+        .logout
+          border-left: none
+          padding-left: 0
+          margin-left: 30px
     &__item-content
       .card
         justify-content: space-between
