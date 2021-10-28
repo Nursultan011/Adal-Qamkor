@@ -116,7 +116,7 @@
                     >Актюбинская область, Каргалинский район, с. Кос-Истек</span
                   >
                 </div>
-                <div class="description">
+                <div class="description black">
                   Үмітай Байболқызы родилась в послевоенные годы в большой
                   семье. Так как родителям приходилось много работать, вся
                   забота о младших братьях и сестре легла на её плечи. Когда
@@ -444,7 +444,8 @@
       </div>
     </footer>
 
-    <div class="popup">
+    <!-- Первый попап - Список неравнодушных: -->
+    <div class="popup" style="display: none">
       <div class="popup__inner">
         <div class="close">
           <img src="img/profile/close-popup.svg" alt="" />
@@ -506,6 +507,59 @@
                 <p class="cost cost-blue">10 000 тг</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Пожертвование -->
+    <div class="popup" style="display: none">
+      <div class="popup__inner popup-amount">
+        <div class="close">
+          <img src="img/profile/close-popup.svg" alt="" />
+        </div>
+        <div class="popup-amount__wrap">
+          <div class="title">Введите сумму перевода</div>
+          <form action="">
+            <input class="input-amount" type="text" value="500" />
+            <div class="scroll">
+              <div class="costs">
+                <div class="cost">500 тг</div>
+                <div class="cost">1000 тг</div>
+                <div class="cost active">2000 тг</div>
+              </div>
+            </div>
+            <div class="btns">
+              <button class="button-blue">Сделать перевод</button>
+              <button class="button-pink">Оформить подписку</button>
+            </div>
+            <p>
+              У Вас есть возможность оформить подписку где ежемесячно с вашего
+              счета будет списываться заданная вами сумма денег
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Пожертвование done, last popup -->
+    <div class="popup">
+      <div class="popup__inner popup-amount popup-amount__bg">
+        <div class="close">
+          <img src="img/profile/close-popup.svg" alt="" />
+        </div>
+        <div class="popup-amount__wrap">
+          <div class="title">Спасибо за Вашу доброту</div>
+          <p>
+            Вы сделали доброе дело. Протянув руку помощи ближнему, мы поможем
+            своей стране. Расскажите своим друзьям о нашем проекте.
+          </p>
+          <div class="btns">
+            <button class="button-white">
+              <img src="img/account/share.svg" alt="" />
+              Рассказать о сборе
+            </button>
+            <button class="button-blue">Помочь</button>
           </div>
         </div>
       </div>

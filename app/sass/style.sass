@@ -565,6 +565,84 @@ footer
             margin-top: 35px
             margin-bottom: 15px
 
+.popup-amount
+    width: 420px
+    &__bg
+        p
+            font-size: 15px !important
+    &__wrap
+        margin-top: 50px
+        .title
+            text-align: center
+        .input-amount
+            border-bottom: 2px solid #D3EBF7
+            border-left: none
+            border-top: none
+            border-right: none
+            font-size: 26px
+            color: $black
+            padding: 10px 50px 10px 10px
+            width: 100%
+            background-image: url('../img/profile/tenge.png')
+            background-repeat: no-repeat
+            background-size: 17px
+            background-position: center center
+            background-position-x: 97%
+        .scroll
+            overflow-x: scroll
+        .costs
+            margin-top: 20px
+            display: flex
+            width: max-content
+            padding-bottom: 10px
+            .active
+                background: $blue !important
+                color: $white !important
+                border: 1px solid $blue !important
+        .cost
+            border: 1px solid #D3EBF7
+            box-sizing: border-box
+            border-radius: 10px
+            font-size: 16px
+            cursor: pointer
+            color: $black
+            padding: 6px 20px
+            & + .cost
+                margin-left: 20px
+        .btns
+            margin-top: 40px
+            margin-bottom: 25px
+            button
+                width: 100%
+                font-size: 18px !important
+                & + button
+                    margin-top: 10px
+            .button-pink
+                background: #E86A84
+                border-radius: 7px
+                border: none
+                font-size: 18px
+                padding: 14px 24px
+                text-align: center
+            .button-white
+                border: 1px solid #6BB6E4
+                padding: 14px 24px
+                box-sizing: border-box
+                border-radius: 7px
+                background: $white
+                color: #747474
+                width: 100%
+                display: flex
+                align-items: center
+                justify-content: center
+                img
+                    margin-right: 12px
+        p
+            margin-bottom: 0
+            color: #636363
+            font-size: 14px
+            text-align: center
+
 // Adaptive
 
 @media (max-width: 767px)
