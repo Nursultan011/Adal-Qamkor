@@ -467,6 +467,30 @@
       border-left: 2px solid $blue
       width: 120px
 
+.feedback
+  border-top: 0.5px solid #737373
+  &__wrap
+    display: flex
+    &:first-child
+      margin-top: 40px
+    p
+      font-size: 18px
+      color: #737373
+      margin-bottom: 10px
+    a
+      color: #6BB6E4 !important
+      font-size: 28px
+      font-family: 'font-md'
+      margin-bottom: 50px
+      display: block
+    div
+      & + div
+        margin-left: 100px
+    h4
+      font-size: 24px
+      color: $black
+      display: block
+      margin-bottom: 20px
 @media (max-width: 767px)
   .profile
     padding-bottom: 100px
@@ -586,6 +610,21 @@
           width: 100%
           margin-left: 0
           justify-content: center
+
+  .feedback
+    &__wrap
+      flex-wrap: wrap
+      flex-direction: column
+      div
+        & + div
+          margin-left: 0
+      a
+        font-size: 24px
+        margin-bottom: 30px
+      p
+        font-size: 16px
+      h4
+        font-size: 20px
 
   .fond
     &__banner
