@@ -1,0 +1,859 @@
+.azamat-site
+
+  .banner-first
+    margin-bottom: 30px
+    &__inner
+      background: $main
+      border-radius: 10px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 7px 30px 0 30px
+      &>div
+        display: flex
+        align-items: center
+      p
+        margin-bottom: 0
+        color: $white
+        font-size: 20px
+        font-family: 'font-bold'
+        margin-left: 30px
+        margin-right: 30px
+    &__images
+      margin-right: 30px
+      display: flex
+      img
+        cursor: pointer
+        & + img
+          margin-left: 15px
+    &__close
+      img
+        cursor: pointer
+        width: 20px
+        height: 20px
+
+  .information
+    position: relative
+    margin-bottom: 60px
+    &__inner
+      height: 460px
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center center
+      border-radius: 15px
+      background-image: url('../../img/azamat/information-bg.jpg')
+      background-blend-mode: darken, normal
+      border-radius: 10px
+    &__wrap
+      padding: 0 70px
+      height: 100%
+      @include flex(left,center)
+      &>div
+        &>h2
+          color: $white
+          font-size: 20px
+          font-family: 'font-md'
+        &>h4
+          margin-top: 20px
+          font-size: 32px
+          font-family: 'font-lg'
+          max-width: 260px
+          color: $white
+        &>button
+          @include btn(16px 24px)
+          margin-top: 60px
+
+  .vote
+    margin-bottom: 70px
+    &__inner
+      box-shadow: 0px 3px 10px 1px rgba(36, 99, 115, 0.05)
+      border-radius: 10px
+      background-color: $white
+      background-image: url('../../img/azamat/vote-bg.jpg')
+      padding: 30px 0 40px 70px
+      background-repeat: no-repeat
+      background-position: right bottom
+      background-size: contain
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      span
+        color: $darkGrey
+        margin-top: 15px
+        font-size: 17px
+        font-family: 'font-md'
+        margin-bottom: 20px
+
+  .category
+    margin-bottom: 10px
+    &__items
+      display: flex
+      flex-wrap: wrap
+      margin-top: 50px
+    &__item
+      cursor: pointer
+      background: #FFFFFF
+      border: 0.5px solid #E0E0E0
+      box-sizing: border-box
+      box-shadow: 0px 3px 10px 1px rgba(36, 99, 115, 0.05)
+      border-radius: 5px
+      padding: 12px 25px 12px 15px
+      font-size: 18px
+      color: $black
+      display: flex
+      align-items: center
+      margin-bottom: 30px
+      margin-right: 30px
+      img
+        width: 30px
+        height: 30px
+        margin-right: 15px
+    &__show
+      cursor: pointer
+      color: $grayText !important
+      font-size: 18px
+      letter-spacing: -0.01em
+      text-decoration-line: underline !important
+      display: flex
+      align-items: center
+      margin-bottom: 30px
+
+  .problems
+    &__items
+      margin-top: 50px
+      margin-bottom: 60px
+      display: flex
+      flex-wrap: wrap
+    &__add
+      background-image: url('../../img/azamat/problems-add-bg.png')
+      background-repeat: no-repeat
+      background-position: center bottom
+      cursor: pointer
+    &__add-wrap
+      display: flex
+      flex-direction: column
+      align-items: center
+      .title
+        color: $green !important
+        margin-top: 20px
+        text-align: center
+    &__add-img
+      margin-top: 40px
+      width: 75px
+      height: 75px
+    &__item
+      width: 31.333333%
+      box-shadow: 0px 3px 10px 1px rgba(36, 99, 115, 0.05)
+      border-radius: 5px
+      background-color: $white
+      overflow: hidden
+      margin-right: 3%
+      margin-bottom: 30px
+      position: relative
+      &:nth-child(3n+3)
+        margin-right: 0
+        &>img
+          width: 100%
+          height: 200px
+          border-radius: 5px 5px 0px 0px
+          object-fit: cover
+          object-position: center
+    &__item-category
+      position: absolute
+      top: 20px
+      left: 20px
+      background: #C2F1DC
+      border-radius: 5px
+      padding: 8px 10px
+      font-size: 15px
+      color: $black
+      img
+        width: 20px
+        height: 20px
+        margin-right: 6px
+    &__item-wrap
+      padding: 16px 20px 20px 20px
+      border-bottom: 1px solid #F1F1F1
+    &__item-title
+      font-size: 20px
+      color: $black
+      letter-spacing: -0.01em
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 2
+      -webkit-box-orient: vertical
+      width: 100%
+      height: 46px
+    &__item-subtitle
+      font-size: 16px
+      color: $darkGrey
+      margin-top: 12px
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+      letter-spacing: -0.01em
+    &__item-footer
+      padding: 16px 20px 16px 20px
+      display: flex
+      span
+        color: $darkGrey
+        font-size: 15px
+        letter-spacing: -0.01em
+      &>div
+        margin-left: 16px
+        padding-left: 16px
+        border-left: 0.5px solid #F1F1F1
+        display: flex
+        align-items: center
+        span
+          display: flex
+          align-items: flex-start
+          & + span
+            margin-left: 15px
+      img
+        width: 14px
+        height: 14px
+        margin-right: 8px
+
+  .banner-second
+    margin-bottom: 70px
+    &__inner
+      box-shadow: 0px 3px 10px 1px rgba(36, 99, 115, 0.05)
+      border-radius: 10px
+      overflow: hidden
+      background-color: $main
+      display: flex
+      justify-content: space-between
+      &>div
+        padding: 30px 60px 30px 70px
+        width: 45%
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: space-between
+        p
+          margin-bottom: 0
+          color: $white !important
+          & + p
+            margin-bottom: 20px
+            font-size: 18px
+            font-family: 'font-md'
+      img
+        width: 55%
+        height: 220px
+
+  .search
+    &__input
+      width: calc(85% - 24px)
+    &__wrap
+      .title
+        display: flex
+        align-items: center
+        img
+          cursor: pointer
+          width: 25px
+          height: 25px
+          margin-right: 30px
+
+  .candidates
+    margin-bottom: 170px
+    &__items
+      margin-top: 60px
+      margin-bottom: 20px
+      display: flex
+      flex-wrap: wrap
+    &__item
+      width: 31.333333%
+      box-shadow: 0px 3px 10px 1px rgba(36, 99, 115, 0.05)
+      border-radius: 5px
+      background-color: $white
+      overflow: hidden
+      margin-right: 3%
+      margin-bottom: 30px
+      position: relative
+      &:nth-child(3n+3)
+        margin-right: 0
+        &>img
+          width: 100%
+          height: 200px
+          border-radius: 5px 5px 0px 0px
+          object-fit: cover
+          object-position: center
+    &__item-wrap
+      padding: 16px 20px 20px 20px
+      border-bottom: 1px solid #F1F1F1
+    &__item-title
+      font-size: 20px
+      color: $black
+      letter-spacing: -0.01em
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+      width: 100%
+    &__item-descr
+      margin-top: 2px
+      color: #575757
+      font-size: 14px
+      letter-spacing: -0.01em
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+    &__item-subtitle
+      font-size: 16px
+      color: $darkGrey
+      margin-top: 12px
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+      letter-spacing: -0.01em
+    &__item-footer
+      padding: 16px 20px 16px 20px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      p
+        margin-bottom: 0
+        color: $black
+        font-size: 16px
+    &__item-show
+      cursor: pointer
+      color: $green !important
+      font-size: 16px
+      text-decoration: underline !important
+    .pagination
+      &__all
+        color: $green !important
+
+  // Страница - Все категории
+
+  .category-section
+    margin-top: 60px
+    margin-bottom: 160px
+    &__items
+      display: flex
+      flex-wrap: wrap
+    &__item
+      background: #FCFCFC
+      box-shadow: 0px 3px 10px 1px rgba(36, 99, 115, 0.05)
+      border-radius: 10px
+      overflow: hidden
+      width: 22.75%
+      height: 145px
+      cursor: pointer
+      margin-right: 3%
+      margin-bottom: 30px
+      position: relative
+      padding: 35px 30px 25px 25px
+      &:nth-child(4n+4)
+        margin-right: 0
+      img
+        width: 40px
+        height: 40px
+        margin-bottom: 20px
+      p
+        margin-bottom: 0
+        color: #575757
+        font-size: 18px
+        overflow: hidden
+        display: -webkit-box
+        -webkit-line-clamp: 2
+        -webkit-box-orient: vertical
+
+  // Страница Список проблем
+
+  .category-list
+    margin-bottom: 300px
+    &__items
+      background: #FFFFFF
+      border-radius: 10px
+      padding-left: 40px
+      padding-right: 40px
+    &__item
+      display: flex
+      align-items: center
+      justify-content: space-between
+      cursor: pointer
+      height: 80px
+      & + .category-list__item
+        border-top: 1px solid #F2F4F8
+      div
+        width: calc(100% - 30px)
+      p
+        color: #575757
+        font-size: 20px
+        overflow: hidden
+        display: -webkit-box
+        -webkit-line-clamp: 1
+        -webkit-box-orient: vertical
+        width: 100%
+        margin-bottom: 0
+      img
+        width: 15px
+        height: 15px
+    &__number
+      display: block
+      color: $green
+      font-size: 15px
+      margin-top: 10px
+
+  // Категории карточки
+
+  .category-card
+    margin-bottom: 180px
+
+  // Страница Новости
+
+  .news-banner
+    position: relative
+    margin-bottom: 97px
+    &__inner
+      height: 460px
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center center
+      background-image: url('../../img/azamat/news-banner.jpg')
+      background-blend-mode: darken, normal
+      border-radius: 10px
+    &__wrap
+      padding: 90px 70px
+      height: 100%
+      @include flex(left,flex-end)
+      &>div
+        &>h2
+          color: $white
+          font-size: 20px
+          font-family: 'font-md'
+        &>h4
+          margin-top: 40px
+          font-size: 32px
+          font-family: 'font-lg'
+          color: $white
+
+  .news
+    margin-bottom: 200px
+    &__inner
+      padding-left: 19%
+      padding-right: 19%
+    .title
+      margin-bottom: 40px
+    .description
+      p
+        color: #636363
+        font-size: 18px
+        line-height: 26px
+        margin-bottom: 0
+        & + p
+          margin-top: 30px
+    &__quote
+      font-size: 24px
+      line-height: 28px
+      font-family: 'font-md'
+      color: $black
+      text-align: center
+      padding: 30px 7%
+      margin: 70px 0
+      position: relative
+      &::after, &::before
+        content: ''
+        position: absolute
+        left: calc(50% - 110px)
+        background: $green
+        width: 220px
+        height: 2px
+      &::after
+        top: 0
+      &::before
+        bottom: 0
+    &__wrap
+      margin-left: -14%
+      margin-right: -14%
+      margin-top: 100px
+      &>div
+        display: flex
+        justify-content: space-between
+        & + div
+          margin-top: 110px
+        img
+          width: 50%
+        .description
+          width: 42%
+
+  // Страница Заполнить анкету
+
+  .workship
+    margin-top: 35px
+    margin-bottom: 160px
+    &__inner
+      .title
+        display: flex
+        align-items: center
+        img
+          margin-right: 15px
+          width: 32px
+          height: 32px
+    &__form
+      margin-top: 50px
+      width: 730px
+      .button
+        margin-top: 60px
+      .form-control
+        & + .form-control
+          margin-top: 40px
+        label
+          color: #575757
+          font-size: 20px
+          font-family: 'font-md'
+          display: block
+          margin-bottom: 25px
+        p
+          color: #ACACAC
+          font-size: 18px
+          margin-top: -15px
+          margin-bottom: 25px
+          padding-right: 10%
+        select
+          width: 100%
+          background: #FFFFFF
+          border-radius: 10px
+          height: 54px
+          border: none
+          padding-left: 24px
+          padding-right: 24px
+          color: #ACACAC
+          -webkit-appearance: none
+          -moz-appearance: none
+          appearance: none
+          background-image: url('../../img/azamat/arrow-right.svg')
+          background-repeat: no-repeat
+          background-size: 14px 14px
+          background-position: right center
+          background-position-x: 98%
+        textarea
+          color: #575757
+          padding: 24px
+          resize: none
+          background: #FFFFFF
+          border-radius: 10px
+          height: 200px
+          border: none
+          width: 100%
+          &::placeholder
+            color: #ACACAC
+        .image
+          display: flex
+          flex-wrap: wrap
+          &__item
+            background: #FFFFFF
+            box-shadow: 0px 3px 10px 1px rgba(36, 99, 115, 0.05)
+            border-radius: 10px
+            width: 22.75%
+            height: 165px
+            margin-right: 3%
+            margin-bottom: 30px
+            display: flex
+            justify-content: center
+            align-items: center
+            &:nth-child(4n+4)
+              margin-right: 0
+            span
+              font-size: 18px
+              color: #ACACAC
+              background: #F2F4F8
+              border-radius: 100%
+              width: 60px
+              height: 60px
+              display: flex
+              align-items: center
+              justify-content: center
+          &__add
+            background: $green !important
+            cursor: pointer
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            text-align: center
+            font-size: 14px !important
+            padding-left: 14px
+            color: $white !important
+            padding-right: 14px
+            img
+              margin-bottom: 18px
+              width: 54px
+              height: 50px
+        .maps
+          width: 100%
+          height: 390px
+          &-location
+            margin-top: 10px
+            color: #ACACAC
+            display: flex
+            align-items: center
+            font-size: 18px
+            img
+              margin-right: 10px
+        .checkbox
+          background: #FFFFFF
+          border: 0.5px solid #ACACAC
+          box-sizing: border-box
+          border-radius: 2px
+          width: 25px
+          height: 25px
+          margin-top: 10px
+          &-label
+            margin-top: 10px
+            color: #575757
+            font-size: 18px
+            margin-left: 10px
+
+@media (max-width: 767px)
+  .azamat-site
+    .banner-first
+      display: none
+
+    .information
+      margin-bottom: 0
+      z-index: -1
+      .container
+        padding-left: 0
+        padding-right: 0
+      &__inner
+        height: 480px
+        border-radius: 0
+      &__wrap
+        padding: 0 20px
+        h4
+          font-size: 26px
+          width: auto
+          line-height: 32px
+        button
+          margin-top: 40px
+
+    .vote
+      z-index: 10
+      margin-top: -50px
+      &__inner
+        padding: 20px 20px 120px 20px
+        span
+          font-size: 15px
+        .button
+          padding: 8px 16px
+          font-size: 15px
+
+    .category
+      margin-bottom: 35px
+      &__mobile
+        overflow-x: scroll
+      &__items
+        width: 940px
+        margin-top: 25px
+      &__item
+        margin-bottom: 15px
+        margin-right: 15px
+        padding: 10px 20px 10px 11px
+      &__show
+        margin-bottom: 15px
+
+    .problems
+      &__items
+        margin-top: 25px
+      &__item
+        margin-right: 0
+        width: 100%
+        img
+          width: 100%
+      &__add
+        height: 359px
+
+    .banner-second
+      &__inner
+        flex-wrap: wrap
+        &>div
+          width: 100%
+          padding: 20px
+          .title
+            margin-bottom: 10px
+          p
+            text-align: center
+            width: 100%
+            & + p
+              font-size: 17px
+          .button
+            width: 100%
+        img
+          height: auto
+          width: 100%
+
+    .search
+      &__form
+        padding: 20px
+        button
+          width: 100%
+      &__input
+        width: 100%
+      &__wrap
+        .title
+          img
+            margin-right: 12px
+        .location
+          span
+            overflow: hidden
+            display: -webkit-box
+            -webkit-line-clamp: 1
+            -webkit-box-orient: vertical
+
+    .candidates
+      &__item
+        margin-right: 0
+        width: 100%
+        img
+          width: 100%
+
+    .category-section
+      &__items
+        justify-content: space-between
+      &__item
+        width: 48%
+        margin-right: 0%
+        &:nth-child(3n+3)
+          margin-right: 0 !important
+        &:nth-child(4n+4)
+          margin-right: 0%
+
+    .category-list
+      &__items
+        padding-left: 20px
+        padding-right: 20px
+      &__item
+        height: 65px
+        p
+          font-size: 18px
+      &__number
+        font-size: 12px
+        margin-top: 6px
+
+    .news-banner
+      &__inner
+        height: 230px
+      &__wrap
+        padding: 20px
+        div
+          h2
+            font-size: 14px
+          h4
+            font-size: 26px
+            margin-top: 10px
+
+    .news
+      &__inner
+        padding-left: 0
+        padding-right: 0
+      &__wrap
+        margin-left: 0
+        margin-right: 0
+        margin-top: 50px
+        &>div
+          flex-wrap: wrap
+          .description
+            width: 100%
+          img
+            width: 100%
+            margin-bottom: 30px
+          &:first-child
+            flex-direction: column-reverse
+          & + div
+            margin-top: 30px
+
+    .workship
+      &__form
+        width: 100%
+        .button
+          width: 100%
+        .form-control
+          .image
+            justify-content: space-between
+            &__item
+              width: 48%
+              margin-bottom: 15px
+              margin-right: 0 !important
+
+@media (min-width: 768px) and (max-width: 991px)
+  .azamat-site
+    .banner-first
+      display: none
+
+    .information
+      &__wrap
+        padding: 0 50px
+
+    .vote
+      &__inner
+        padding-left: 50px
+
+    .category
+      &__item
+        margin-right: 25px
+        margin-bottom: 25px
+
+    .problems
+      &__items
+        justify-content: space-between
+      &__item
+        margin-right: 0
+        width: 48%
+
+    .banner-second
+      &__inner
+        &>div
+          width: 100%
+          padding-left: 40px
+          .title
+            margin-bottom: 15px
+        img
+          display: none
+
+    .candidates
+      &__items
+        justify-content: space-between
+      &__item
+        width: 48%
+        margin-right: 0
+
+    .category-section
+      &__item
+        width: 31.333333%
+        margin-right: 3%
+        &:nth-child(3n+3)
+          margin-right: 0 !important
+        &:nth-child(4n+4)
+          margin-right: 3%
+
+    .news
+      &__wrap
+        &>div
+          align-items: flex-start
+
+    .workship
+      &__form
+        width: 100%
+
+@media (min-width: 992px) and (max-width: 1199px)
+  .azamat-site
+    .banner-second
+      &__inner
+        &>div
+          width: 40%
+          padding: 30px 40px
+        img
+          width: 60%
+    .search
+      &__input
+        width: calc(85% - 35px)
+    .news
+      &__wrap
+        &>div
+          align-items: flex-start
