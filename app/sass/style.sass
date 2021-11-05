@@ -3,6 +3,9 @@
 @import 'libs'
 @import 'vars'
 @import './azamat-site/main'
+@import './sauat-site/course'
+@import './sauat-site/profile'
+@import './sauat-site/main'
 @import 'profile'
 @import 'media'
 @import 'collection'
@@ -16,6 +19,12 @@ html
 body
     background-color: $whiteBlue
     margin: 0
+
+.sauat-bg
+    background-color: $black !important
+
+.sauat-footer
+    background: #2E2C2C !important
 
 *,*::before,*::after
     box-sizing: inherit
@@ -126,7 +135,7 @@ h1,h2,h3,h4,h5,h6
     &-menu
         display: none
 
-main
+.qamkor-site
     .sliders
         position: relative
         &_wrapper
@@ -299,6 +308,13 @@ main
                     color: #6BB6E4
                     font-size: 16px
                     border-bottom: 1px solid #6BB6E4
+
+.sauat-header
+    .inner_right_langs
+        span
+            color: $white !important
+        .active
+            color: $green !important
 
 header
     padding: 30px 0
@@ -665,6 +681,7 @@ footer
             img
                 width: 250px
                 height: 185px
+
 // Adaptive
 
 @media (max-width: 767px)
@@ -681,6 +698,8 @@ footer
             height: 100vh
             padding-top: 30px
             padding-bottom: 30px
+            &__sauat
+                background-color: $black !important
             &__header
                 display: flex
                 align-items: center
@@ -731,7 +750,7 @@ footer
             &_langs
                 display: none !important
 
-    main
+    .qamkor-site
         .sliders
             &_wrapper
                 height: 480px
@@ -835,6 +854,9 @@ footer
         .close
             right: 20px
             top: 20px
+            img
+                width: 20px
+                height: 20px
         img
             width: 20px
             height: 20px
@@ -862,6 +884,17 @@ footer
                     & + span
                         margin-left: 10px
 
+    .popup__flex
+        flex-wrap: wrap
+        .button
+            width: 100%
+            margin-right: 0
+        .popup__registration
+            margin-top: 20px
+            text-align: center
+            width: 100%
+            font-size: 18px
+
 @media (min-width: 768px) and (max-width: 992px)
 
     .burger
@@ -884,7 +917,7 @@ footer
             &_langs
                 display: none !important
 
-    main
+    .qamkor-site
         .sponsor
             &__items
                 flex-wrap: wrap
@@ -928,7 +961,7 @@ footer
 
 @media (min-width: 993px) and (max-width: 1199px)
 
-    main
+    .qamkor-site
         .request__inner
             .title
                 padding: 0 10%
