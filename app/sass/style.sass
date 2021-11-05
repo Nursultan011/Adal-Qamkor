@@ -6,10 +6,10 @@
 @import './sauat-site/course'
 @import './sauat-site/profile'
 @import './sauat-site/main'
-@import 'profile'
+@import './qamkor-site/account'
+@import './qamkor-site/collection'
+@import './qamkor-site/profile'
 @import 'media'
-@import 'collection'
-@import 'account'
 
 // GLOBAL
 html
@@ -58,7 +58,7 @@ h1,h2,h3,h4,h5,h6
     background: $green
     border-radius: 7px
     border: none
-    font-size: 20px
+    font-size: 18px
     text-align: center
     padding: 14px 24px
     cursor: pointer
@@ -70,7 +70,7 @@ h1,h2,h3,h4,h5,h6
     cursor: pointer
     border: none
     padding: 14px 24px
-    font-size: 20px
+    font-size: 18px
 
 .button-darker
     background: #144356
@@ -434,6 +434,11 @@ footer
                     svg
                         path
                             stroke: $green
+
+.popup-sauat
+    .popup__inner
+        .button
+            width: 50%
 
 .popup
     background: rgba(0, 0, 0, 0.4)
@@ -840,6 +845,11 @@ footer
                 height: 26px !important
         .footer_bottom_right
             margin-right: -10px
+
+    .popup-sauat
+        .popup__inner
+            .button
+                width: 100%
 
     .popup__inner
         padding: 25px 20px
